@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FindMyBike Collector"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- ===== Trip setup (locked while recording) ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Where is the phone during the ride?"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/placementGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etRider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rider"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etBike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Bike"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/etNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notes (route, weather, indoor/outdoor parking…) — saved when the trip ends"
+            android:inputType="textMultiLine" />
+
+        <!-- ===== Start / end ===== -->
+        <Button
+            android:id="@+id/btnTrip"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginTop="12dp"
+            android:text="Start trip"
+            android:textSize="20sp" />
+
+        <!-- ===== Event labels (tap only when stopped and safe) ===== -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Mark events (only when stopped and safe)"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnRideStart"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="Ride start" />
+
+            <Button
+                android:id="@+id/btnShortStop"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="Short stop" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPush"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="Pushing bike" />
+
+            <Button
+                android:id="@+id/btnUndo"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:text="Undo last" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnParked"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:text="PARKED HERE (bike locked)"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- ===== Status ===== -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="monospace"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Share last trip (.zip)" />
+    </LinearLayout>
+</ScrollView>
